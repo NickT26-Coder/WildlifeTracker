@@ -1,3 +1,115 @@
-* {
-    
+/*General*/
+:root {
+    --primary-color:#fd5101;
+    --secondary-color: #005344;
+    --dark-color: #002e2b;
+    --light-color: #fff;
+    --popcolor:#f4ce00;
 }
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+header, footer {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+/*Utility*/
+.font-sm {
+    font-size: 0.8rem;
+}
+
+.center-txt {
+    text-align: center;
+}
+
+
+/*Overall Layout*/
+body {
+    display: grid;
+    grid-template-rows: 6rem 1fr 3rem;
+}
+
+main {
+    grid-row: 2;
+    height: 100%;
+}
+
+header {
+    grid-row: 1;
+    top: 0;
+}
+
+footer {
+    grid-row: 3;
+    bottom: 0px;
+    position: absolute;
+    width: 100%;
+    padding: 1rem;
+}
+
+
+/*Header Layout*/
+
+h1 {
+    font-size: 1.5rem;
+    width: 35%;
+    padding-left: 1rem;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: sticky;
+    padding-top: 1rem;
+}
+
+header img {
+    height: 80%;
+}
+
+/*Nav*/
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    padding-bottom: 1rem;
+}
+
+nav ul {
+    display: inherit;
+}
+
+nav li {
+    padding-right: 1rem;
+    font-size: 1.5rem;
+}
+
+nav a {
+    border-bottom: 4px solid var(--secondary-color);
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+nav a:hover, 
+nav a:active{
+    border-bottom: 4px solid var(--popcolor);
+    color: var(--popcolor);
+}
+
+/*Main*/
