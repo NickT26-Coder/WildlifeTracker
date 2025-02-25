@@ -1,6 +1,7 @@
 /*General*/
 :root {
-    --primary-color:#fd5101;
+    /*f8ae72   fd5101*/
+    --primary-color:#fa8424;
     --secondary-color: #005344;
     --dark-color: #002e2b;
     --light-color: #fff;
@@ -24,7 +25,7 @@ header, footer {
 }
 
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 
@@ -42,22 +43,25 @@ body {
 body {
     display: grid;
     grid-template-rows: 6rem 1fr 3rem;
+    grid-template-columns: 10% 80% 10%;
 }
 
 main {
     grid-row: 2;
-    height: 100%;
+    grid-column: 2;
 }
 
 header {
     grid-row: 1;
+    grid-column: 1/4;
     top: 0;
 }
 
 footer {
     grid-row: 3;
+    grid-column: 1/4;
     bottom: 0px;
-    position: absolute;
+    position: fixed;
     width: 100%;
     padding: 1rem;
 }
@@ -66,8 +70,9 @@ footer {
 /*Header Layout*/
 
 h1 {
+    flex-grow: 1;
+    max-width: 500px;
     font-size: 1.5rem;
-    width: 35%;
     padding-left: 1rem;
 }
 
@@ -77,39 +82,168 @@ header {
     justify-content: space-around;
     position: sticky;
     padding-top: 1rem;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
 }
 
 header img {
     height: 80%;
+    scale: 1.2;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
 }
 
 /*Nav*/
-nav {
+/* nav {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-end;
-    padding-bottom: 1rem;
-}
+} */
 
 nav ul {
-    display: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
 }
 
 nav li {
+    align-content: center;
+    height: 100%;
     padding-right: 1rem;
     font-size: 1.5rem;
 }
 
 nav a {
+    display: flex;
     border-bottom: 4px solid var(--secondary-color);
     text-decoration: none;
     color: var(--secondary-color);
 }
 
-nav a:hover, 
-nav a:active{
-    border-bottom: 4px solid var(--popcolor);
-    color: var(--popcolor);
+nav a[href="#"] {
+    border: none;
 }
 
+nav a:hover, 
+nav a:active{
+    border-bottom: 4px solid var(--dark-color);
+    color: var(--dark-color);
+}
+
+/*Sidebar*/
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    z-index: 999;
+    background-color: var(--primary-color);
+    box-shadow: -10px 0px 10px rgba(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+.menu-button {
+    display: none;
+}
+
+@media(max-width: 1155px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
+}
+
+@media(max-width: 500px) {
+    .sidebar {
+        width: 100%;
+    }
+    h1 {
+        max-width: 400px;
+    }
+}
+
+
 /*Main*/
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+main article {
+    padding: 20px;
+}
+
+
+/*Footer*/
+footer {
+    box-shadow: 0 -5px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.foooter-container {
+    width: 50%;
+}
+
+.footer-socials {
+    width: 45%;
+}
+
+.footer-socials ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.footer-socials ul li {
+    padding-left: 20px;
+}
+
+
+
+/*Wildlife Tracker*/
+.container {
+    display: flex;
+    width: 100%;
+    background-color: var(--secondary-color);
+    min-height: 200px;
+    margin: 10px 0px;
+    align-items: center;
+}
+
+.container img{
+    max-width: 250px;
+    max-height: 250px;
+    padding: 20px;
+}
+
+#checkbox {
+    background-color: var(--popcolor);
+    margin: 20px;
+    padding: 10px;
+}
+
+.alpha-nav ul li {
+    display: inline;
+    padding-right: 10px;
+}
+
+.alpha-nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
