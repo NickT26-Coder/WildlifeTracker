@@ -31,7 +31,7 @@ body {
 
 /*Utility*/
 .font-sm {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 
 .center-txt {
@@ -81,6 +81,7 @@ header {
     flex-wrap: wrap;
     justify-content: space-around;
     position: sticky;
+    z-index: 100;
     padding-top: 1rem;
     box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
 }
@@ -128,7 +129,7 @@ nav a:active{
     color: var(--dark-color);
 }
 
-/*Sidebar*/
+/*Sidebar Reference: https://www.youtube.com/watch?v=U8smiWQ8Seg&pp=ygUVbWFrZSBhIHNpZGViYXIgaW4gY3Nz*/
 .sidebar {
     position: fixed;
     top: 0;
@@ -178,7 +179,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 30px;
+    padding-top: 20px;
 }
 
 main article {
@@ -231,10 +232,40 @@ footer {
     padding: 20px;
 }
 
-#checkbox {
+.animal-description p {
+    font-size: small;
+    padding-top: 8px;
+    padding-right: 5px;
+}
+
+
+
+input[type=checkbox] {
+    width: 30px;
+    height: 30px;
+    appearance: none;
+    background-color: #e0e0e0;
+    border: 3px solid var(--popcolor);
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="checkbox"]:checked {
     background-color: var(--popcolor);
-    margin: 20px;
-    padding: 10px;
+}
+
+input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-container {
+    display: block;
+    color: var(--light-color);
+    padding-right: 30px;
 }
 
 .alpha-nav ul li {
@@ -246,4 +277,35 @@ footer {
     display: flex;
     justify-content: center;
     padding: 10px;
+}
+
+.subheading {
+    font-size: 1.2rem;
+    max-width: fit-content;
+    border-bottom: 4px solid var(--popcolor);
+    padding-top: 10px;
+    padding-inline: 5px;
+}
+
+.subheading ul li {
+    display: inline;
+    color: var(--popcolor);
+    padding-right: 5px;
+}
+
+.subheading a:visited {
+    color: var(--popcolor);
+}
+
+.animal-description {
+    color: var(--light-color);
+}
+
+.map-container img {
+    border: 5px solid var(--dark-color);
+    transform: scale(0.8);
+}
+
+.map-container h2 {
+    text-align: center;
 }

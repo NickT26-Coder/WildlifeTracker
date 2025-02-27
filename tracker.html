@@ -4,26 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Nick Tingen">
-    <!--<link rel="icon" type="image/x-icon" href="images/favicon.ico">-->
+    <link rel="icon" type="image/x-icon" href="images/WT.ico">
     <link rel="stylesheet" href="css/styles.css">
     <title>Wildlife Tracker</title>
 </head>
 <body>
     <header>
         <h1>Great Smoky Mountains National Park Wildlife Tracker</h1>
-        <img src="./images/WT.png">
+        <img class="hideOnMobile" src="./images/WT.png">
         <nav>
-            <ul>
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></a></li>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="tracker.html">Wildlife Tracker</a></li>
                 <li><a href="map.html">Map</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <ul>
+                <li class="hideOnMobile"><a href="index.html">Home</a></li>
+                <li class="hideOnMobile"><a href="tracker.html">Wildlife Tracker</a></li>
+                <li class="hideOnMobile"><a href="map.html">Map</a></li>
+                <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+                <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg></a></li>
+            </ul>
         </nav>
     </header>
     <main>
         <section>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere cumque aut deserunt itaque repudiandae laudantium, eum veritatis quasi doloremque consectetur ea molestiae tempore temporibus, laboriosam minus, libero dignissimos cum ut!</p>
+            <p>Welcome to the Great Smoky Mountains National Park Wildlife Checklist! This guide is designed to help visitors discover and appreciate the rich diversity of wildlife that inhabits the park. From the majestic black bears and elusive bobcats to the vibrant bird species and unique amphibians, this checklist allows you to track your sightings and learn more about the park's natural inhabitants. Whether you're hiking through dense forests or exploring the park's stunning landscapes, the checklist offers an engaging way to connect with the park's ecosystems and enhance your wildlife experience. Get ready to embark on an unforgettable adventure while observing the incredible creatures that call this protected area home.</p>
             <div class="alpha-nav">
                 <ul>
                     <li><a href="#A">A</a></li>
@@ -55,18 +63,162 @@
                 </ul>
             </div>
             <div class="container">
-                <img src="./images/smoky_moutains.jpg">
-                <h2>Animal Name</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error maiores excepturi ut dicta fuga, recusandae totam magni porro possimus est, laborum dolorem voluptatum sunt voluptate hic explicabo velit quis aperiam?</p>
-                <a id="checkbox"><svg xmlns="http://www.w3.org/2000/svg" height="64" width="64" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg></a>
+                <a href="https://www.nps.gov/articles/000/american-black-bear.htm"><img alt="American Black Bear" src="./images/american_black_bear.jpg"></a>
+                <div class="animal-description">
+                    <h2>American Black Bear</h2>
+                    <div class="subheading">
+                        <ul>
+                            <li>"Ursus americanus"</li>
+                            <li>Mammal</li>
+                            <li><a href="https://www.nps.gov/articles/000/american-black-bear.htm">National Park</a></li>
+                        </ul>
+                    </div>
+                    <p>The American Black Bear is a common sight in the Great Smoky Mountains, known for its black to brown fur. Omnivorous and adaptable, these bears eat a variety of foods, including fruits, nuts, and small mammals. Skilled climbers and swimmers, black bears typically hibernate in winter. While large and powerful, they are generally shy and avoid human interaction, playing a crucial role in the park's ecosystem.</p>
+                    <p class="font-sm">Source: (Images courtesy of NPS)</p>
+                </div>
+                <div class="checkbox-container">
+                    <span class="checkmark"></span>
+                    <input type="checkbox">
+                </div>
+                <!-- <a id="checkbox" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="56" width="56" viewBox="0 0 448 512">!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.<path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg></a> -->
             </div>
-            <div class="container"></div>
-            <div class="container"></div>
-            <div class="container"></div>
-            <div class="container"></div>
-            <div class="container"></div>
-            <div class="container"></div>
-            <div class="container"></div>
+            <div class="container">
+                <a href="https://www.nps.gov/redw/learn/nature/spotted-owl-and-barred-owl.htm"><img alt="Barred Owl" src="./images/barred_owl.jpg"></a>
+                <div class="animal-description">
+                    <h2>Barred Owl</h2>
+                    <div class="subheading">
+                        <ul>
+                            <li>"Strix varia"</li>
+                            <li>Bird</li>
+                            <li><a href="https://www.nps.gov/redw/learn/nature/spotted-owl-and-barred-owl.htm">National Park</a></li>
+                        </ul>
+                    </div>
+                    <p>The Barred Owl is a striking bird found in the Great Smoky Mountains, recognized by its brown and white striped plumage and distinctive "who-cooks-for-you" call. These nocturnal hunters thrive in wooded areas, preying on small mammals, birds, and amphibians. With excellent vision and hearing, barred owls are skilled at silently hunting at night. Typically elusive, they play a key role in controlling rodent populations in the park's ecosystem.</p>
+                    <p class="font-sm">Source: ( © Blair Dudeck)</p>
+                </div>
+                <div class="checkbox-container">
+                    <span class="checkmark"></span>
+                    <input type="checkbox">
+                </div>
+                <!-- <a id="checkbox" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="56" width="56" viewBox="0 0 448 512">!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.<path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg></a> -->
+            </div>
+            <div class="container">
+                <a href="https://www.nps.gov/yell/learn/nature/coyote.htm"><img alt="Coyote" src="./images/coyote.jpg"></a>
+                <div class="animal-description">
+                    <h2>Coyote</h2>
+                    <div class="subheading">
+                        <ul>
+                            <li>"Canas latrans"</li>
+                            <li>Mammal</li>
+                            <li><a href="https://www.nps.gov/yell/learn/nature/coyote.htm">National Park</a></li>
+                        </ul>
+                    </div>
+                    <p>The coyote is a versatile and adaptable predator found in the Great Smoky Mountains. With a slender build and a bushy tail, coyotes are often seen in forests, meadows, and along park roads. They are omnivores, feeding on small mammals, birds, fruits, and insects. Coyotes are known for their keen senses and remarkable ability to survive in a variety of habitats. Though typically shy and elusive, they contribute to maintaining balance in the park’s ecosystem by controlling populations of smaller animals.</p>
+                    <p class="font-sm">Source: (https://greatsmokyvacations.wordpress.com/2022/01/15/coyotes-in-east-tennessee/)</p>
+                </div>
+                <div class="checkbox-container">
+                    <span class="checkmark"></span>
+                    <input type="checkbox">
+                </div>
+            </div>
+            <div class="container">
+                <a href="https://www.nps.gov/grsm/learn/nature/reptiles.htm"><img alt="Eastern Box Turtle" src="./images/box_turtle.jpg"></a>
+                <div class="animal-description">
+                    <h2>Eastern Box Turtle</h2>
+                    <div class="subheading">
+                        <ul>
+                            <li>"Terrapene carolina carolina"</li>
+                            <li>Reptile</li>
+                            <li><a href="https://www.nps.gov/grsm/learn/nature/reptiles.htm">National Park</a></li>
+                        </ul>
+                    </div>
+                    <p>The Eastern Box Turtle is a small, colorful turtle commonly found in the Great Smoky Mountains. Known for its high-domed shell, which features intricate patterns of yellow and orange, this terrestrial turtle is often spotted in wooded areas and along streams. Box turtles are omnivores, feeding on plants, insects, and small invertebrates. They are unique for their ability to completely close their shells, providing protection from predators. Slow-moving and long-lived, they play an important role in the park’s ecosystem by helping to disperse seeds and maintain soil health.</p>
+                    <p class="font-sm">Source: (Wikipedia)</p>
+                </div>
+                <div class="checkbox-container">
+                    <span class="checkmark"></span>
+                    <input type="checkbox">
+                </div>
+            </div>
+            <div class="container">
+                <a href="https://www.nps.gov/grsm/learn/nature/elk.htm"><img alt="Elk" src="./images/elk.jpg"></a>
+                <div class="animal-description">
+                    <h2>Elk</h2>
+                    <div class="subheading">
+                        <ul>
+                            <li>"Cervus canadensis"</li>
+                            <li>Mammal</li>
+                            <li><a href="https://www.nps.gov/grsm/learn/nature/elk.htm">National Park</a></li>
+                        </ul>
+                    </div>
+                    <p>The Bull Elk is a majestic animal found in the Great Smoky Mountains, known for its impressive size and large, antlered rack. During the fall rut, bull elk are particularly notable for their loud bugling calls as they compete for mates. These herbivores graze on grasses, shrubs, and tree bark, and can often be seen in open meadows or along the park's edges. Once near extinction in the region, elk are now a symbol of wildlife conservation efforts, playing a key role in shaping the park's ecosystems through their grazing habits.</p>
+                    <p class="font-sm">Source: (https://www.romanticasheville.com/elk.htm)</p>
+                </div>
+                <div class="checkbox-container">
+                    <span class="checkmark"></span>
+                    <input type="checkbox">
+                </div>
+            </div>
+            <div class="container">
+                <a href="https://www.nps.gov/bith/learn/nature/eastern-gray-squirrel.htm"><img alt="Gray Squirrel" src="./images/gray_squirrel.jpg"></a>
+                <div class="animal-description">
+                    <h2>Gray Squirrel (Eastern)</h2>
+                    <div class="subheading">
+                        <ul>
+                            <li>"Sciurus carolinensis"</li>
+                            <li>Rodent</li>
+                            <li><a href="https://www.nps.gov/bith/learn/nature/eastern-gray-squirrel.htm">National Park</a></li>
+                        </ul>
+                    </div>
+                    <p>The Gray Squirrel is a common and lively sight in the Great Smoky Mountains, easily recognized by its bushy tail and gray fur. These agile rodents thrive in wooded areas, where they feed on nuts, seeds, and fruits, often storing food for the winter months. Known for their playful behavior, gray squirrels are excellent climbers and can be seen darting through trees or foraging on the forest floor. They play a vital role in seed dispersal, helping to maintain the health of the park’s diverse plant life.</p>
+                    <p class="font-sm">Source: (Images courtesy of NPS)</p>
+                </div>
+                <div class="checkbox-container">
+                    <span class="checkmark"></span>
+                    <input type="checkbox">
+                </div>
+            </div>
+            <div class="container">
+                <a href="https://www.nps.gov/grsm/learn/nature/amphibians.htm"><img alt="Spotted Salamander" src="./images/spotted_salamander.jpg"></a>
+                <div class="animal-description">
+                    <h2>Spotted Salamander</h2>
+                    <div class="subheading">
+                        <ul>
+                            <li>"Ambystoma maculatum"</li>
+                            <li>Amphibian</li>
+                            <li><a href="https://www.nps.gov/grsm/learn/nature/amphibians.htm">National Park</a></li>
+                        </ul>
+                    </div>
+                    <p>The Spotted Salamander is a striking amphibian found in the Great Smoky Mountains, easily identified by its black body adorned with bright yellow spots. 
+                        Preferring moist, wooded habitats, they are most often seen during their breeding season in early spring, when they migrate to vernal pools to lay eggs. 
+                        These nocturnal creatures feed on insects, worms, and other small invertebrates. The spotted salamander plays an important role in controlling insect populations 
+                        and maintaining the health of the park’s ecosystem.</p>
+                    <p class="font-sm">Source: (Lang Elliot)</p>
+                </div>
+                <div class="checkbox-container">
+                    <span class="checkmark"></span>
+                    <input type="checkbox">
+                </div>
+            </div>
+            <div class="container">
+                <a href="https://www.nps.gov/grsm/learn/nature/white-tailed-deer.htm"><img alt="White-tailed Deer" src="./images/white_deer.jpg"></a>
+                <div class="animal-description">
+                    <h2>White-tailed Deer</h2>
+                    <div class="subheading">
+                        <ul>
+                            <li>"Odocoileus virginianus"</li>
+                            <li>Mammal</li>
+                            <li><a href="https://www.nps.gov/grsm/learn/nature/white-tailed-deer.htm">National Park</a></li>
+                        </ul>
+                    </div>
+                    <p>The White-tailed Deer (Odocoileus virginianus) is a common and graceful sight in the Great Smoky Mountains. Recognizable by its white underside and tail, which it raises as a warning signal when startled, this deer is a herbivore, feeding on grasses, shrubs, and tree leaves. Active primarily at dawn and dusk, white-tailed deer are known for their agility and speed, helping them evade predators. As a key species in the park, they help shape plant communities through browsing, and their presence contributes to the overall health of the ecosystem.</p>
+                    <p class="font-sm">Source: (Mickey / Flickr; CC BY-NC-SA 2.0)</p>
+                </div>
+                <div class="checkbox-container">
+                    <span class="checkmark"></span>
+                    <input type="checkbox">
+                </div>
+            </div>
         </section>
     </main>
     <footer class="center-txt">
@@ -75,9 +227,9 @@
         </div>
         <div class="footer-socials">
             <ul>
-                <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg></a></li>
-                <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/></svg></a></li>
-                <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></a></li>
+                <li><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/GreatSmokyMountainsNPS/"><svg xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg></a></li>
+                <li><a target="_blank" rel="noopener noreferrer" href="https://youtube.com/@nationalparkservice?feature=shared"><svg xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/></svg></a></li>
+                <li><a target="_blank" rel="noopener noreferrer" href="https://x.com/GreatSmokyNPS"><svg xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></a></li>
             </ul>
         </div>
     </footer>
