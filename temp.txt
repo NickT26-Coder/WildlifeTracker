@@ -1,0 +1,320 @@
+for (animal of Object.keys(animals)) {
+        let URL = base_URL
+        URL += animal
+        const response = await fetch(URL, {
+            headers: {
+              Authorization: API_KEY,
+            }
+        })
+        try {
+            if (!response.ok) {
+                throw new Error("Unable to get resources")
+            }
+            const data = await response.json()
+            
+            data[0].image = animals[animal].image
+            data[0].image_source = animals[animal].image_source
+            data[0].description = animals[animal].description
+            data[0].website_link = animals[animal].website_link
+            data[0].fun_fact = animals[animal].fun_fact
+            addAnimal(data)
+        } catch(error) {
+            console.error(error)
+        }
+    }
+
+
+    const animals = {
+        "american black bear": {
+            image: "/images/american_black_bear.jpg",
+            image_source: "Source: (Images courtesy of NPS)",
+            description: "The American black bear is the most widely distributed bear species in North America, found in forests, swamps, and other forested areas. They are omnivorous, feeding on a variety of foods including fruits, nuts, insects, and small mammals.",
+            website_link: "https://www.nps.gov/articles/000/american-black-bear.htm",
+            fun_fact: "Black bears are excellent swimmers and can run up to 30 miles per hour."
+        },
+        "american robin": {
+            image: "/images/american_robin.jpg",
+            image_source: "© Sue Tranter",
+            description: "The American robin is a migratory songbird of the thrush family, known for its bright orange-red breast and melodious song. They are commonly found in gardens and forests across North America.",
+            website_link: "http://wildlifeanimalz.blogspot.com/2012/07/American-Robin.html",
+            fun_fact: "Robins are often among the first birds to sing at dawn."
+        },
+        "barred owl": {
+            image: "/images/barred_owl.jpg",
+            image_source: "birdsflight.com",
+            description: "Barred owls are large, nocturnal birds of prey with distinctive hoots that sound like 'Who cooks for you? Who cooks for you all?'. They inhabit mature forests and are known for their adaptability to urban environments.",
+            website_link: "https://birdsflight.com/barred-owl-facts-barred-owl-habitat-barred-owl-diet/",
+            fun_fact: "Barred owls are known to mimic the calls of other birds and animals."
+        },
+        "black rat snake": {
+            image: "/images/black_rat_snake.jpg",
+            image_source: "Getty Images/ Joe McDonald",
+            description: "The black rat snake is a non-venomous constrictor found in forests and farmlands. They are excellent climbers and swimmers, often preying on rodents and birds.",
+            website_link: "https://www.thesprucepets.com/rat-snakes-1239229",
+            fun_fact: "Black rat snakes can grow up to 7 feet long and are known for their docile nature."
+        },
+        "black-capped chickadee": {
+            image: "/images/black-capped_chickadee.jpg",
+            image_source: "© Scott Martin",
+            description: "Black-capped chickadees are small, non-migratory songbirds with distinctive black caps and bibs. They are known for their curious nature and adaptability to human environments.",
+            website_link: "https://ebird.org/species/bkcchi",
+            fun_fact: "Chickadees can hide up to 500,000 food items each winter and remember the locations using a unique memory mechanism."
+        },
+        "bobcat": {
+            image: "/images/bobcat.jpg",
+            image_source: "© Sebastian Kennerknecht",
+            description: "The bobcat is a medium-sized wild cat native to North America, known for its short 'bobbed' tail and tufted ears. They are solitary hunters, preying on small mammals and birds.",
+            website_link: "https://panthera.org/blog-post/small-cat-spotlight-bobcat",
+            fun_fact: "Bobcats are excellent climbers and swimmers."
+        },
+        "brook trout": {
+            image: "/images/brook_trout.jpg",
+            image_source: "Almeta Louis",
+            description: "Brook trout are freshwater fish native to eastern North America, known for their vibrant coloration and preference for cold, clean streams.",
+            website_link: "https://almetalouis.blogspot.com/2022/10/colorado-fishing-report-western-slope.html",
+            fun_fact: "Brook trout are often used as indicators of stream health due to their sensitivity to pollution."
+        },
+        "canada warbler": {
+            image: "/images/canada_warbler.jpg",
+            image_source: "Tony Dvorak",
+            description: "The Canada warbler is a small, migratory songbird with a distinctive yellow belly and black necklace. They breed in dense, wet forests and migrate to Central and South America for the winter.",
+            website_link: "https://ebird.org/species/canwar",
+            fun_fact: "Canada warblers are known for their rapid, buzzy songs."
+        },
+        "copperhead": {
+            image: "/images/copperhead.jpg",
+            image_source: "Maryland Zoo",
+            description: "Copperheads are venomous snakes found in deciduous forests and mixed woodlands. They have a distinctive copper-colored head and are known for their camouflaged appearance.",
+            website_link: "https://www.marylandzoo.org/animal/northern-copperhead/",
+            fun_fact: "Copperheads are known to be relatively docile and will often freeze when threatened."
+        },
+        "coyote": {
+            image: "/images/coyote.jpg",
+            image_source: "Courtesy of NPS",
+            description: "Coyotes are highly adaptable canines found throughout North America, from rural forests to urban areas. They are opportunistic feeders, preying on small mammals and scavenging human food.",
+            website_link: "https://www.nps.gov/yell/learn/nature/coyote.htm",
+            fun_fact: "Coyotes are known to be highly adaptable and can thrive in urban environments."
+        },
+        "duskytail darter": {
+            image: "/images/duskytail_darter.jpg",
+            image_source: "Tennessee Aquarium",
+            description: "The duskytail darter is a small freshwater fish found in clear, fast-flowing streams in the southeastern United States. They are known for their vibrant coloration and preference for clean habitats.",
+            website_link: "https://tnacifin.com/fish/duskytail-darter/",
+            fun_fact: "Duskytail darters are often used as indicators of stream health."
+        },
+        "eastern box turtle": {
+            image: "/images/box_turtle.jpg",
+            image_source: "Shaver's Creek ",
+            description: "Eastern box turtles are terrestrial reptiles with high-domed, ornately marked shells. They are known for their longevity and ability to close their shells tightly for protection.",
+            website_link: "https://www.shaverscreek.org/2021/08/25/eastern-box-turtles-a-declining-gem-of-eastern-forests/",
+            fun_fact: "Eastern box turtles can live up to 100 years in the wild."
+        },
+        "eastern cottontail": {
+            image: "/images/eastern_cottontail.jpg",
+            image_source: "© James Chen",
+            description: "Eastern cottontails are common rabbits found in fields, meadows, and forests. They are known for their distinctive white tail and large ears.",
+            website_link: "https://www.welcomewildlife.com/all-about-cottontail-rabbits/",
+            fun_fact: "Cottontails can leap up to 10 feet in a single bound."
+        },
+        "eastern fence lizard": {
+            image: "/images/eastern_fence_lizard.webp",
+            image_source: "Animalia.bio",
+            description: "Eastern fence lizards are spiny lizards found in woodlands and grasslands. Males are known for their bright blue belly patches, which they display to ward off rivals.",
+            website_link: "https://animalia.bio/eastern-fence-lizard",
+            fun_fact: "Eastern fence lizards are sometimes called 'pine lizards' due to their fondness for pine trees."
+        },
+        "eastern fox squirrel": {
+            image: "/images/eastern_fox_squirrel.webp",
+            image_source: "Oregon Dept. of Fish and Wildlife",
+            description: "Eastern fox squirrels are large tree squirrels found in forests and urban areas. They are known for their bushy tails and varied coloration.",
+            website_link: "https://myodfw.com/wildlife-viewing/species/eastern-fox-squirrel",
+            fun_fact: "Fox squirrels are known to hoard food in multiple locations to ensure a winter food supply."
+        },
+        "eastern gray squirrel": {
+            image: "/images/gray_squirrel.jpg",
+            image_source: "Courtesy of NPS",
+            description: "Eastern gray squirrels are common tree squirrels found in forests and urban areas. They are known for their agility and adaptability.",
+            website_link: "https://www.nps.gov/bith/learn/nature/eastern-gray-squirrel.htm",
+            fun_fact: "Gray squirrels can leap up to 10 feet between trees."
+        },
+        "eastern newt": {
+            image: "/images/eastern_newt.jpg",
+            image_source: "AnimalSpot.com",
+            description: "The eastern newt is a small, brightly colored amphibian found in woodlands with nearby ponds or wetlands. It has a fascinating three-stage life cycle: aquatic larva, terrestrial juvenile (called a red eft), and aquatic adult.",
+            website_link: "https://www.animalspot.net/eastern-newt.html",
+            fun_fact: "The eastern newt produces a toxin through its skin that makes it unpalatable to predators — and its bright orange 'eft' stage acts as a warning signal!"
+        },
+        "eastern red bat": {
+            image: "/images/eastern_red_bat.webp",
+            image_source: "earth.com",
+            description: "Eastern red bats are solitary, nocturnal mammals known for their striking reddish fur and white facial markings. They are tree-dwelling and often roost in foliage during the day.",
+            website_link: "https://www.earth.com/news/eastern-red-bats-do-well-in-managed-forests/",
+            fun_fact: "Eastern red bats are migratory and can travel up to 1,000 miles to reach warmer climates during winter."
+        },
+        "eastern screech owl": {
+            image: "/images/eastern_screech_owl.jpg",
+            image_source: "© Daniel Irons",
+            description: "Eastern screech owls are small, nocturnal birds with ear tufts and a variety of vocalizations. They are adept at blending into their surroundings during the day.",
+            website_link: "https://ebird.org/species/easowl1/US",
+            fun_fact: "When threatened, eastern screech owls can elongate their bodies and tighten their feathers to resemble a tree branch, aiding in camouflage."
+        },
+        "golden eagle": {
+            image: "/images/golden_eagle.jpg",
+            image_source: "pbs.org",
+            description: "Golden eagles are large birds of prey with dark brown plumage and a golden sheen on the back of their heads. They are powerful hunters, preying on mammals and birds.",
+            website_link: "https://www.pbs.org/wnet/nature/blog/golden-eagle-fact-sheet/",
+            fun_fact: "Golden eagles have been known to hunt prey as large as deer and are capable of reaching speeds over 150 mph during dives."
+        },
+        "gray fox": {
+            image: "/images/gray_fox.jpg",
+            image_source: "herofortheplanet.org",
+            description: "Gray foxes are small canines with a mix of gray and reddish fur. Unlike most canids, they are excellent climbers and often take refuge in trees.",
+            website_link: "https://herofortheplanet.org/longleaf/explore/longleaf-habitats/flatwoods/gray-fox/",
+            fun_fact: "Gray foxes are one of the few canids that can climb trees, using their sharp claws to scale trunks and escape predators."
+        },
+        "green salamander": {
+            image: "/images/green_salamander.jpg",
+            image_source: "iNaturalist.org",
+            description: "Green salamanders are arboreal amphibians with bright green coloration and black markings. They inhabit moist, rocky crevices in forests.",
+            website_link: "https://www.inaturalist.org/guide_taxa/1620780",
+            fun_fact: "Green salamanders are primarily insectivorous and are known for their elusive nature, often hiding in vertical rock faces."
+        },
+        "little brown myotis": {
+            image: "/images/brown_myotis.png",
+            image_source: "© Merlin Tuttle",
+            description: "Little brown myotis are small, insectivorous bats with brown fur and large ears. They are commonly found in caves and buildings.",
+            website_link: "https://wdfw.wa.gov/species-habitats/species/myotis-lucifugus",
+            fun_fact: "Little brown myotis can consume up to half their body weight in insects each night, playing a crucial role in pest control."
+        },
+        "marbled salamander": {
+            image: "/images/marbled_salamander.jpg",
+            image_source: "heritageconservancy.org",
+            description: "Marbled salamanders are terrestrial amphibians with striking black and white patterns. They are typically found in dry, wooded areas.",
+            website_link: "https://heritageconservancy.org/meet-the-marbled-salamander/",
+            fun_fact: "Marbled salamanders breed in autumn, often in temporary pools that form after fall rains."
+        },
+        "northern flying squirrel": {
+            image: "/images/northern_flying_squirrel.jpg",
+            image_source: "nature.ca",
+            description: "Northern flying squirrels are nocturnal rodents with a membrane between their limbs that allows them to glide between trees.",
+            website_link: "https://www.animalspot.net/northern-flying-squirrel.html",
+            fun_fact: "Northern flying squirrels are known to hoard food in tree cavities to survive the winter months."
+        },
+        "northern saw-whet owl": {
+            image: "/images/northern_saw-whet_owl.jpg",
+            image_source: "© Ana Paula Oxom",
+            description: "Northern saw-whet owls are small, nocturnal birds with a distinctive 'saw-whet' call. They are often found in dense forests.",
+            website_link: "",
+            fun_fact: "Northern saw-whet owls are among the smallest owls in North America and are known for their secretive nature."
+        },
+        "raccoon": {
+            image: "/images/raccoon.jpg",
+            image_source: "livescience.com",
+            description: "Raccoons are medium-sized mammals with gray fur and black facial masks. They are omnivorous and highly adaptable to urban environments.",
+            website_link: "https://www.classifiedmom.com/what-does-a-baby-raccoon-look-like/",
+            fun_fact: "Raccoons are known for their dexterous front paws and have been observed opening containers and doors to access food."
+        },
+        "rainbow trout": {
+            image: "/images/rainbow_trout.jpg",
+            image_source: "fishingbooker.com",
+            description: "Rainbow trout are freshwater fish with a distinctive pink stripe along their sides. They are popular among anglers for their fighting ability.",
+            website_link: "https://fishingbooker.com/blog/trout-of-north-america-complete-guide/",
+            fun_fact: "Rainbow trout are capable of migrating between freshwater and saltwater, exhibiting anadromous behavior."
+        },
+        "red salamander": {
+            image: "/images/red_salamander.jpeg",
+            image_source: "© Todd Pierson",
+            description: "Red salamanders are striking amphibians with bright red or orange coloration and black spots. They are typically found in moist, wooded areas.",
+            website_link: "https://www.inaturalist.org/guide_taxa/69041",
+            fun_fact: "Red salamanders are often found under logs and rocks, where they prey on small invertebrates."
+        },
+        "red-tailed hawk": {
+            image: "/images/red-tailed_hawk.jpg",
+            image_source: "© Jerry Liguori",
+            description: "Red-tailed hawks are large raptors with a distinctive reddish-brown tail. They are common across North America and are known for their soaring flight.",
+            website_link: "https://ebird.org/species/rethaw",
+            fun_fact: "Red-tailed hawks have excellent vision and can spot prey from great distances while soaring high in the sky."
+        },
+        "slimy salamander": {
+            image: "/images/slimy_salamander.jpg",
+            image_source: "© Jake Scott",
+            description: "Slimy salamanders are amphibians with smooth, shiny skin that secretes a sticky substance when threatened. They are typically found in damp, wooded areas.",
+            website_link: "https://www.flickr.com/photos/tamers1/27526008678/",
+            fun_fact: "The sticky secretion from slimy salamanders can deter predators and help them escape from threats."
+        },
+        "smoky madtom": {
+            image: "/images/smoky_madtom.webp",
+            image_source: "Conservation Fisheries, Inc.",
+            description: "The smoky madtom is a small, nocturnal catfish native to fast-moving, clear streams in the southeastern United States. It's considered endangered due to its limited range and sensitivity to habitat disruption.",
+            website_link: "https://www.nps.gov/grsm/learn/nature/threatened-species-abrams.htm",
+            fun_fact: "Smoky madtoms are so secretive and rare that they went unseen for over 50 years before being rediscovered in 1980."
+        },
+        "spotted salamander": {
+            image: "/images/spotted_salamander.jpg",
+            image_source: "Courtesy of NPS",
+            description: "Spotted salamanders are large, colorful amphibians with black bodies and bright yellow or orange spots. They inhabit deciduous forests near vernal pools.",
+            website_link: "https://www.nps.gov/grsm/learn/nature/amphibians.htm",
+            fun_fact: "Spotted salamanders have a symbiotic relationship with algae that live in their eggs, providing oxygen to the developing embryos."
+        },
+        "spotfin chub": {
+            image: "/images/spotfin_chub.webp",
+            image_source: "© Luke Etchison NCWRC",
+            description: "The spotfin chub is a rare, silvery-blue minnow found in clear, rocky rivers of the southeastern U.S. It's federally listed as threatened.",
+            website_link: "https://ncfishes.com/freshwater-fishes-of-north-carolina/cyprinella-monacha/",
+            fun_fact: "Male spotfin chubs develop brilliant breeding colors and build nests out of pebbles to attract females."
+        },
+        "timber rattlesnake": {
+            image: "/images/timber_rattlesnake.jpg",
+            image_source: "Maryland Zoo",
+            description: "The timber rattlesnake is a large, venomous snake found in deciduous forests and rugged terrain. It has a distinctive rattle on its tail used as a warning.",
+            website_link: "https://www.marylandzoo.org/animal/timber-rattlesnake/",
+            fun_fact: "Despite their fearsome reputation, timber rattlesnakes are very docile and often give multiple warnings before striking."
+        },
+        "virginia opossum": {
+            image: "/images/virginia_opossum.jpg",
+            image_source: "© Alden M. Johnson",
+            description: "The Virginia opossum is North America's only native marsupial. It's known for its white face, gray body, and prehensile tail used for climbing.",
+            website_link: "https://www.nps.gov/prsf/learn/nature/virginia-opossum.htm",
+            fun_fact: "When threatened, opossums 'play dead' — a defense mechanism that can last up to 4 hours!"
+        },
+        "white-tailed deer": {
+            image: "/images/white_deer.jpg",
+            image_source: "Mickey / Flickr; CC BY-NC-SA 2.0",
+            description: "White-tailed deer are graceful herbivores found across North America. They're named for the white underside of their tails, which they flash when alarmed.",
+            website_link: "https://www.nps.gov/grsm/learn/nature/white-tailed-deer.htm",
+            fun_fact: "A white-tailed deer can sprint up to 30 miles per hour and jump over 8 feet high!"
+        },
+        "wild turkey": {
+            image: "/images/wild_turkey.webp",
+            image_source: "© Melissa James",
+            description: "Wild turkeys are large, ground-dwelling birds with iridescent feathers and fan-shaped tails. They are native to North America and prefer wooded habitats.",
+            website_link: "https://www.audubon.org/news/10-fun-facts-about-wild-turkey",
+            fun_fact: "Wild turkeys can fly for short bursts at speeds up to 55 mph — not bad for such big birds!"
+        },
+        "yellowfin madtom": {
+            image: "/images/yellowfin_madtom.jpg",
+            image_source: "© Joel Sartore",
+            description: "The yellowfin madtom is a small, bottom-dwelling catfish native to the clear, rocky streams of the Tennessee River Valley. It’s considered threatened due to habitat loss.",
+            website_link: "https://www.conservationfisheries.org/madtoms/yellowfin-madtom",
+            fun_fact: "Yellowfin madtoms are named for the bright yellow tint on their fins, which glows more intensely during the breeding season."
+        }
+    }
+
+    const tooltips = document.querySelectorAll(".tooltip-icon");
+    tooltips.forEach((tooltip) => {
+        tooltip.addEventListener("mouseover", (e) => {
+            const animalHeader = tooltip.parentElement.parentElement;   
+            let toolTipIcon = tooltip.parentElement;
+            let toolTipContent = toolTipIcon.nextElementSibling;
+            toolTipContent.classList.add("open");
+
+            toolTipContent.style.left = animalHeader.clientWidth + "px";
+            toolTipContent.style.bottom = animalHeader.clientHeight + "px";
+        })
+
+        tooltip.addEventListener("mouseout", (e) => {
+            document.querySelectorAll(".tooltip-content").forEach((tooltip) => {
+                tooltip.classList.remove("open");
+            });
+        })
+    });

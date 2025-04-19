@@ -81,7 +81,7 @@ header {
     flex-wrap: wrap;
     justify-content: space-around;
     position: sticky;
-    z-index: 100;
+    z-index: 992;
     padding-top: 1rem;
     box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
 }
@@ -161,6 +161,9 @@ nav a:active{
     .menu-button {
         display: block;
     }
+    .map-container img, .map-container h2 {
+        scale: 50%;
+    }
 }
 
 @media(max-width: 500px) {
@@ -191,6 +194,7 @@ main article {
 footer {
     box-shadow: 0 -5px 6px rgba(0,0,0,0.1);
     display: flex;
+    z-index: 992;
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
@@ -224,6 +228,23 @@ footer {
     min-height: 200px;
     margin: 10px 0px;
     align-items: center;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.7s, visibility 0.7s;
+}
+
+.container.hide {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+}
+
+.searchbar {
+    text-align: center;
+}
+
+input[type="search"] {
+    border: 3px solid black;
 }
 
 .container img{
@@ -238,9 +259,51 @@ footer {
     padding-right: 5px;
 }
 
+.animal-description {
+    color: var(--light-color);
+    position: relative;
+    width: 80%;
+}
 
+.animal-description h2 {
+    width: fit-content;
+    display: inline;
+}
 
-input[type=checkbox] {
+/* .animal-header {
+    display: flex;  
+    position: relative;
+    width: fit-content;
+} */
+
+.animal-description svg {
+    z-index: 900;
+    padding-left: 10px;
+    width: 25px;
+    height: 25px;
+    pointer-events: all;
+}
+
+.tooltip-content {
+    position: absolute;
+    width: 100%;
+    max-width: 400px;
+    max-height: 100px;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    background-color: var(--dark-color);
+    border: solid 1px;
+    transition: visibility 0.5s, opacity 0.5s ease-in-out;
+}
+
+.tooltip-content.open {
+    opacity: 1;
+    visibility: visible;
+    z-index: 900;
+}
+
+input[type="checkbox"] {
     width: 30px;
     height: 30px;
     appearance: none;
@@ -279,7 +342,7 @@ input[type="checkbox"]:checked::after {
     padding: 10px;
 }
 
-.subheading {
+.animal-description ul {
     font-size: 1.2rem;
     max-width: fit-content;
     border-bottom: 4px solid var(--popcolor);
@@ -287,20 +350,18 @@ input[type="checkbox"]:checked::after {
     padding-inline: 5px;
 }
 
-.subheading ul li {
+.animal-description ul li {
     display: inline;
     color: var(--popcolor);
     padding-right: 5px;
 }
 
-.subheading a:visited {
+.animal-description a {
     color: var(--popcolor);
+    text-decoration: none;
 }
 
-.animal-description {
-    color: var(--light-color);
-}
-
+/*<Map Page*/
 .map-container img {
     border: 5px solid var(--dark-color);
     transform: scale(0.8);

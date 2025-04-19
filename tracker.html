@@ -6,6 +6,7 @@
     <meta name="author" content="Nick Tingen">
     <link rel="icon" type="image/x-icon" href="images/WT.ico">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="script.js"></script>
     <title>Wildlife Tracker</title>
 </head>
 <body>
@@ -32,198 +33,195 @@
     <main>
         <section>
             <p>Welcome to the Great Smoky Mountains National Park Wildlife Checklist! This guide is designed to help visitors discover and appreciate the rich diversity of wildlife that inhabits the park. From the majestic black bears and elusive bobcats to the vibrant bird species and unique amphibians, this checklist allows you to track your sightings and learn more about the park's natural inhabitants. Whether you're hiking through dense forests or exploring the park's stunning landscapes, the checklist offers an engaging way to connect with the park's ecosystems and enhance your wildlife experience. Get ready to embark on an unforgettable adventure while observing the incredible creatures that call this protected area home.</p>
-            <div class="alpha-nav">
-                <ul>
-                    <li><a href="#A">A</a></li>
-                    <li><a href="#B">B</a></li>
-                    <li><a href="#C">C</a></li>
-                    <li><a href="#D">D</a></li>
-                    <li><a href="#E">E</a></li>
-                    <li><a href="#F">F</a></li>
-                    <li><a href="#G">G</a></li>
-                    <li><a href="#H">H</a></li>
-                    <li><a href="#I">I</a></li>
-                    <li><a href="#J">J</a></li>
-                    <li><a href="#K">K</a></li>
-                    <li><a href="#L">L</a></li>
-                    <li><a href="#M">M</a></li>
-                    <li><a href="#N">N</a></li>
-                    <li><a href="#O">O</a></li>
-                    <li><a href="#P">P</a></li>
-                    <li><a href="#Q">Q</a></li>
-                    <li><a href="#R">R</a></li>
-                    <li><a href="#S">S</a></li>
-                    <li><a href="#T">T</a></li>
-                    <li><a href="#U">U</a></li>
-                    <li><a href="#V">V</a></li>
-                    <li><a href="#W">W</a></li>
-                    <li><a href="#X">X</a></li>
-                    <li><a href="#Y">Y</a></li>
-                    <li><a href="#Z">Z</a></li>
-                </ul>
+            <div class="searchbar">
+                <label for="search">Search Animal Database</label>
+                <input placeholder="Name" type="search" id="search" data-search>
             </div>
-            <div class="container">
-                <a href="https://www.nps.gov/articles/000/american-black-bear.htm"><img alt="American Black Bear" src="./images/american_black_bear.jpg"></a>
-                <div class="animal-description">
-                    <a id="A"></a>
-                    <h2>American Black Bear</h2>
-                    <div class="subheading">
-                        <ul>
+            <div class="animal-cards">
+                <div class="container">
+                    <a class="hideOnMobile" href="https://www.nps.gov/articles/000/american-black-bear.htm"><img alt="American Black Bear" src="./images/american_black_bear.jpg"></a>
+                    <div class="animal-description">
+                        <h2>American Black Bear</h2>
+                        <svg class="hideOnMobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.<path class="tooltip-icon" d="M297.2 248.9C311.6 228.3 320 203.2 320 176c0-70.7-57.3-128-128-128S64 105.3 64 176c0 27.2 8.4 52.3 22.8 72.9c3.7 5.3 8.1 11.3 12.8 17.7c0 0 0 0 0 0c12.9 17.7 28.3 38.9 39.8 59.8c10.4 19 15.7 38.8 18.3 57.5L109 384c-2.2-12-5.9-23.7-11.8-34.5c-9.9-18-22.2-34.9-34.5-51.8c0 0 0 0 0 0s0 0 0 0c-5.2-7.1-10.4-14.2-15.4-21.4C27.6 247.9 16 213.3 16 176C16 78.8 94.8 0 192 0s176 78.8 176 176c0 37.3-11.6 71.9-31.4 100.3c-5 7.2-10.2 14.3-15.4 21.4c0 0 0 0 0 0s0 0 0 0c-12.3 16.8-24.6 33.7-34.5 51.8c-5.9 10.8-9.6 22.5-11.8 34.5l-48.6 0c2.6-18.7 7.9-38.6 18.3-57.5c11.5-20.9 26.9-42.1 39.8-59.8c0 0 0 0 0 0s0 0 0 0s0 0 0 0c4.7-6.4 9-12.4 12.7-17.7zM192 128c-26.5 0-48 21.5-48 48c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-44.2 35.8-80 80-80c8.8 0 16 7.2 16 16s-7.2 16-16 16zm0 384c-44.2 0-80-35.8-80-80l0-16 160 0 0 16c0 44.2-35.8 80-80 80z"/></svg>
+                        <p class="tooltip-content">American black bears are excellent tree climbers! In fact, they are one of the best tree-climbing bears in the world. They have strong, curved claws and a flexible spine that allows them to ascend and descend trees with ease. </p>
+                        <ul>    
                             <li>"Ursus americanus"</li>
                             <li>Mammal</li>
                             <li><a href="https://www.nps.gov/articles/000/american-black-bear.htm">National Park</a></li>
                         </ul>
+                        <p>The American Black Bear is a common sight in the Great Smoky Mountains, known for its black to brown fur. Omnivorous and adaptable, these bears eat a variety of foods, including fruits, nuts, and small mammals. Skilled climbers and swimmers, black bears typically hibernate in winter. While large and powerful, they are generally shy and avoid human interaction, playing a crucial role in the park's ecosystem.</p>
+                        <p class="font-sm">Source: (Images courtesy of NPS)</p>
                     </div>
-                    <p>The American Black Bear is a common sight in the Great Smoky Mountains, known for its black to brown fur. Omnivorous and adaptable, these bears eat a variety of foods, including fruits, nuts, and small mammals. Skilled climbers and swimmers, black bears typically hibernate in winter. While large and powerful, they are generally shy and avoid human interaction, playing a crucial role in the park's ecosystem.</p>
-                    <p class="font-sm">Source: (Images courtesy of NPS)</p>
-                </div>
-                <div class="checkbox-container">
-                    <span class="checkmark"></span>
-                    <input type="checkbox">
-                </div>
-                <!-- <a id="checkbox" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="56" width="56" viewBox="0 0 448 512">!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.<path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg></a> -->
-            </div>
-            <div class="container">
-                <a href="https://www.nps.gov/redw/learn/nature/spotted-owl-and-barred-owl.htm"><img alt="Barred Owl" src="./images/barred_owl.jpg"></a>
-                <div class="animal-description">
-                    <a id="B"></a>
-                    <h2>Barred Owl</h2>
-                    <div class="subheading">
-                        <ul>
-                            <li>"Strix varia"</li>
-                            <li>Bird</li>
-                            <li><a href="https://www.nps.gov/redw/learn/nature/spotted-owl-and-barred-owl.htm">National Park</a></li>
-                        </ul>
+                    <div class="checkbox-container">
+                        <span class="checkmark"></span>
+                        <input type="checkbox">
                     </div>
-                    <p>The Barred Owl is a striking bird found in the Great Smoky Mountains, recognized by its brown and white striped plumage and distinctive "who-cooks-for-you" call. These nocturnal hunters thrive in wooded areas, preying on small mammals, birds, and amphibians. With excellent vision and hearing, barred owls are skilled at silently hunting at night. Typically elusive, they play a key role in controlling rodent populations in the park's ecosystem.</p>
-                    <p class="font-sm">Source: ( © Blair Dudeck)</p>
+                    <!-- <a id="checkbox" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="56" width="56" viewBox="0 0 448 512">!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.<path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg></a> -->
                 </div>
-                <div class="checkbox-container">
-                    <span class="checkmark"></span>
-                    <input type="checkbox">
-                </div>
-                <!-- <a id="checkbox" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="56" width="56" viewBox="0 0 448 512">!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.<path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg></a> -->
-            </div>
-            <div class="container">
-                <a href="https://www.nps.gov/yell/learn/nature/coyote.htm"><img alt="Coyote" src="./images/coyote.jpg"></a>
-                <div class="animal-description">
-                    <a id="C"></a>
-                    <h2>Coyote</h2>
-                    <div class="subheading">
-                        <ul>
-                            <li>"Canas latrans"</li>
-                            <li>Mammal</li>
-                            <li><a href="https://www.nps.gov/yell/learn/nature/coyote.htm">National Park</a></li>
-                        </ul>
+                <div class="container">
+                    <a class="hideOnMobile" href="https://www.nps.gov/redw/learn/nature/spotted-owl-and-barred-owl.htm"><img alt="Barred Owl" src="./images/barred_owl.jpg"></a>
+                    <div class="animal-description">
+                        <div class="animal-header">
+                            <h2>Barred Owl</h2>
+                            <svg class="hideOnMobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path class="tooltip-icon" d="M297.2 248.9C311.6 228.3 320 203.2 320 176c0-70.7-57.3-128-128-128S64 105.3 64 176c0 27.2 8.4 52.3 22.8 72.9c3.7 5.3 8.1 11.3 12.8 17.7c0 0 0 0 0 0c12.9 17.7 28.3 38.9 39.8 59.8c10.4 19 15.7 38.8 18.3 57.5L109 384c-2.2-12-5.9-23.7-11.8-34.5c-9.9-18-22.2-34.9-34.5-51.8c0 0 0 0 0 0s0 0 0 0c-5.2-7.1-10.4-14.2-15.4-21.4C27.6 247.9 16 213.3 16 176C16 78.8 94.8 0 192 0s176 78.8 176 176c0 37.3-11.6 71.9-31.4 100.3c-5 7.2-10.2 14.3-15.4 21.4c0 0 0 0 0 0s0 0 0 0c-12.3 16.8-24.6 33.7-34.5 51.8c-5.9 10.8-9.6 22.5-11.8 34.5l-48.6 0c2.6-18.7 7.9-38.6 18.3-57.5c11.5-20.9 26.9-42.1 39.8-59.8c0 0 0 0 0 0s0 0 0 0s0 0 0 0c4.7-6.4 9-12.4 12.7-17.7zM192 128c-26.5 0-48 21.5-48 48c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-44.2 35.8-80 80-80c8.8 0 16 7.2 16 16s-7.2 16-16 16zm0 384c-44.2 0-80-35.8-80-80l0-16 160 0 0 16c0 44.2-35.8 80-80 80z"/></svg>
+                            <p class="tooltip-content">Barred Owls are expert mimics! They are known to imitate the calls of other birds, animals, and even man-made sounds they hear in their environment.</p>
+                        </div>
+                        <div class="subheading">
+                            <ul>
+                                <li>"Strix varia"</li>
+                                <li>Bird</li>
+                                <li><a href="https://www.nps.gov/redw/learn/nature/spotted-owl-and-barred-owl.htm">National Park</a></li>
+                            </ul>
+                        </div>
+                        <p>The Barred Owl is a striking bird found in the Great Smoky Mountains, recognized by its brown and white striped plumage and distinctive "who-cooks-for-you" call. These nocturnal hunters thrive in wooded areas, preying on small mammals, birds, and amphibians. With excellent vision and hearing, barred owls are skilled at silently hunting at night. Typically elusive, they play a key role in controlling rodent populations in the park's ecosystem.</p>
+                        <p class="font-sm">Source: ( © Blair Dudeck)</p>
                     </div>
-                    <p>The coyote is a versatile and adaptable predator found in the Great Smoky Mountains. With a slender build and a bushy tail, coyotes are often seen in forests, meadows, and along park roads. They are omnivores, feeding on small mammals, birds, fruits, and insects. Coyotes are known for their keen senses and remarkable ability to survive in a variety of habitats. Though typically shy and elusive, they contribute to maintaining balance in the park’s ecosystem by controlling populations of smaller animals.</p>
-                    <p class="font-sm">Source: (https://greatsmokyvacations.wordpress.com/2022/01/15/coyotes-in-east-tennessee/)</p>
-                </div>
-                <div class="checkbox-container">
-                    <span class="checkmark"></span>
-                    <input type="checkbox">
-                </div>
-            </div>
-            <div class="container">
-                <a href="https://www.nps.gov/grsm/learn/nature/reptiles.htm"><img alt="Eastern Box Turtle" src="./images/box_turtle.jpg"></a>
-                <div class="animal-description">
-                    <a id="E"></a>
-                    <h2>Eastern Box Turtle</h2>
-                    <div class="subheading">
-                        <ul>
-                            <li>"Terrapene carolina carolina"</li>
-                            <li>Reptile</li>
-                            <li><a href="https://www.nps.gov/grsm/learn/nature/reptiles.htm">National Park</a></li>
-                        </ul>
+                    <div class="checkbox-container">
+                        <span class="checkmark"></span>
+                        <input type="checkbox">
                     </div>
-                    <p>The Eastern Box Turtle is a small, colorful turtle commonly found in the Great Smoky Mountains. Known for its high-domed shell, which features intricate patterns of yellow and orange, this terrestrial turtle is often spotted in wooded areas and along streams. Box turtles are omnivores, feeding on plants, insects, and small invertebrates. They are unique for their ability to completely close their shells, providing protection from predators. Slow-moving and long-lived, they play an important role in the park’s ecosystem by helping to disperse seeds and maintain soil health.</p>
-                    <p class="font-sm">Source: (Wikipedia)</p>
+                    <!-- <a id="checkbox" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="56" width="56" viewBox="0 0 448 512">!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.<path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg></a> -->
                 </div>
-                <div class="checkbox-container">
-                    <span class="checkmark"></span>
-                    <input type="checkbox">
-                </div>
-            </div>
-            <div class="container">
-                <a href="https://www.nps.gov/grsm/learn/nature/elk.htm"><img alt="Elk" src="./images/elk.jpg"></a>
-                <div class="animal-description">
-                    <h2>Elk</h2>
-                    <div class="subheading">
-                        <ul>
-                            <li>"Cervus canadensis"</li>
-                            <li>Mammal</li>
-                            <li><a href="https://www.nps.gov/grsm/learn/nature/elk.htm">National Park</a></li>
-                        </ul>
+                <div class="container">
+                    <a class="hideOnMobile" href="https://www.nps.gov/yell/learn/nature/coyote.htm"><img alt="Coyote" src="./images/coyote.jpg"></a>
+                    <div class="animal-description">
+                        <div class="animal-header">
+                            <h2>Coyote</h2>
+                            <svg class="hideOnMobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path class="tooltip-icon" d="M297.2 248.9C311.6 228.3 320 203.2 320 176c0-70.7-57.3-128-128-128S64 105.3 64 176c0 27.2 8.4 52.3 22.8 72.9c3.7 5.3 8.1 11.3 12.8 17.7c0 0 0 0 0 0c12.9 17.7 28.3 38.9 39.8 59.8c10.4 19 15.7 38.8 18.3 57.5L109 384c-2.2-12-5.9-23.7-11.8-34.5c-9.9-18-22.2-34.9-34.5-51.8c0 0 0 0 0 0s0 0 0 0c-5.2-7.1-10.4-14.2-15.4-21.4C27.6 247.9 16 213.3 16 176C16 78.8 94.8 0 192 0s176 78.8 176 176c0 37.3-11.6 71.9-31.4 100.3c-5 7.2-10.2 14.3-15.4 21.4c0 0 0 0 0 0s0 0 0 0c-12.3 16.8-24.6 33.7-34.5 51.8c-5.9 10.8-9.6 22.5-11.8 34.5l-48.6 0c2.6-18.7 7.9-38.6 18.3-57.5c11.5-20.9 26.9-42.1 39.8-59.8c0 0 0 0 0 0s0 0 0 0s0 0 0 0c4.7-6.4 9-12.4 12.7-17.7zM192 128c-26.5 0-48 21.5-48 48c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-44.2 35.8-80 80-80c8.8 0 16 7.2 16 16s-7.2 16-16 16zm0 384c-44.2 0-80-35.8-80-80l0-16 160 0 0 16c0 44.2-35.8 80-80 80z"/></svg>
+                            <p class="tooltip-content">Coyotes are monogamous! Unlike many other canine species, coyotes are known to form long-term pair bonds, with some pairs staying together for up to 10 years or more. </p>
+                        </div>
+                        <div class="subheading">
+                            <ul>
+                                <li>"Canas latrans"</li>
+                                <li>Mammal</li>
+                                <li><a href="https://www.nps.gov/yell/learn/nature/coyote.htm">National Park</a></li>
+                            </ul>
+                        </div>
+                        <p>The coyote is a versatile and adaptable predator found in the Great Smoky Mountains. With a slender build and a bushy tail, coyotes are often seen in forests, meadows, and along park roads. They are omnivores, feeding on small mammals, birds, fruits, and insects. Coyotes are known for their keen senses and remarkable ability to survive in a variety of habitats. Though typically shy and elusive, they contribute to maintaining balance in the park’s ecosystem by controlling populations of smaller animals.</p>
+                        <p class="font-sm">Source: (https://greatsmokyvacations.wordpress.com/2022/01/15/coyotes-in-east-tennessee/)</p>
                     </div>
-                    <p>The Bull Elk is a majestic animal found in the Great Smoky Mountains, known for its impressive size and large, antlered rack. During the fall rut, bull elk are particularly notable for their loud bugling calls as they compete for mates. These herbivores graze on grasses, shrubs, and tree bark, and can often be seen in open meadows or along the park's edges. Once near extinction in the region, elk are now a symbol of wildlife conservation efforts, playing a key role in shaping the park's ecosystems through their grazing habits.</p>
-                    <p class="font-sm">Source: (https://www.romanticasheville.com/elk.htm)</p>
-                </div>
-                <div class="checkbox-container">
-                    <span class="checkmark"></span>
-                    <input type="checkbox">
-                </div>
-            </div>
-            <div class="container">
-                <a href="https://www.nps.gov/bith/learn/nature/eastern-gray-squirrel.htm"><img alt="Gray Squirrel" src="./images/gray_squirrel.jpg"></a>
-                <div class="animal-description">
-                    <a id="G"></a>
-                    <h2>Gray Squirrel (Eastern)</h2>
-                    <div class="subheading">
-                        <ul>
-                            <li>"Sciurus carolinensis"</li>
-                            <li>Rodent</li>
-                            <li><a href="https://www.nps.gov/bith/learn/nature/eastern-gray-squirrel.htm">National Park</a></li>
-                        </ul>
+                    <div class="checkbox-container">
+                        <span class="checkmark"></span>
+                        <input type="checkbox">
                     </div>
-                    <p>The Gray Squirrel is a common and lively sight in the Great Smoky Mountains, easily recognized by its bushy tail and gray fur. These agile rodents thrive in wooded areas, where they feed on nuts, seeds, and fruits, often storing food for the winter months. Known for their playful behavior, gray squirrels are excellent climbers and can be seen darting through trees or foraging on the forest floor. They play a vital role in seed dispersal, helping to maintain the health of the park’s diverse plant life.</p>
-                    <p class="font-sm">Source: (Images courtesy of NPS)</p>
                 </div>
-                <div class="checkbox-container">
-                    <span class="checkmark"></span>
-                    <input type="checkbox">
-                </div>
-            </div>
-            <div class="container">
-                <a href="https://www.nps.gov/grsm/learn/nature/amphibians.htm"><img alt="Spotted Salamander" src="./images/spotted_salamander.jpg"></a>
-                <div class="animal-description">
-                    <a id="S"></a>
-                    <h2>Spotted Salamander</h2>
-                    <div class="subheading">
-                        <ul>
-                            <li>"Ambystoma maculatum"</li>
-                            <li>Amphibian</li>
-                            <li><a href="https://www.nps.gov/grsm/learn/nature/amphibians.htm">National Park</a></li>
-                        </ul>
+                <div class="container">
+                    <a class="hideOnMobile" href="https://www.nps.gov/grsm/learn/nature/reptiles.htm"><img alt="Eastern Box Turtle" src="./images/box_turtle.jpg"></a>
+                    <div class="animal-description">
+                        <div class="animal-header">
+                            <h2>Eastern Box Turtle</h2>
+                            <svg class="hideOnMobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path class="tooltip-icon" d="M297.2 248.9C311.6 228.3 320 203.2 320 176c0-70.7-57.3-128-128-128S64 105.3 64 176c0 27.2 8.4 52.3 22.8 72.9c3.7 5.3 8.1 11.3 12.8 17.7c0 0 0 0 0 0c12.9 17.7 28.3 38.9 39.8 59.8c10.4 19 15.7 38.8 18.3 57.5L109 384c-2.2-12-5.9-23.7-11.8-34.5c-9.9-18-22.2-34.9-34.5-51.8c0 0 0 0 0 0s0 0 0 0c-5.2-7.1-10.4-14.2-15.4-21.4C27.6 247.9 16 213.3 16 176C16 78.8 94.8 0 192 0s176 78.8 176 176c0 37.3-11.6 71.9-31.4 100.3c-5 7.2-10.2 14.3-15.4 21.4c0 0 0 0 0 0s0 0 0 0c-12.3 16.8-24.6 33.7-34.5 51.8c-5.9 10.8-9.6 22.5-11.8 34.5l-48.6 0c2.6-18.7 7.9-38.6 18.3-57.5c11.5-20.9 26.9-42.1 39.8-59.8c0 0 0 0 0 0s0 0 0 0s0 0 0 0c4.7-6.4 9-12.4 12.7-17.7zM192 128c-26.5 0-48 21.5-48 48c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-44.2 35.8-80 80-80c8.8 0 16 7.2 16 16s-7.2 16-16 16zm0 384c-44.2 0-80-35.8-80-80l0-16 160 0 0 16c0 44.2-35.8 80-80 80z"/></svg>
+                            <p class="tooltip-content">Eastern Box Turtles can live up to 40 years or more in the wild! That's a remarkable lifespan for a turtle of its size, and it's likely due to their ability to adapt to their environment and avoid predators.</p>
+                        </div>
+                        <div class="subheading">
+                            <ul>
+                                <li>"Terrapene carolina carolina"</li>
+                                <li>Reptile</li>
+                                <li><a href="https://www.nps.gov/grsm/learn/nature/reptiles.htm">National Park</a></li>
+                            </ul>
+                        </div>
+                        <p>The Eastern Box Turtle is a small, colorful turtle commonly found in the Great Smoky Mountains. Known for its high-domed shell, which features intricate patterns of yellow and orange, this terrestrial turtle is often spotted in wooded areas and along streams. Box turtles are omnivores, feeding on plants, insects, and small invertebrates. They are unique for their ability to completely close their shells, providing protection from predators. Slow-moving and long-lived, they play an important role in the park’s ecosystem by helping to disperse seeds and maintain soil health.</p>
+                        <p class="font-sm">Source: (Wikipedia)</p>
                     </div>
-                    <p>The Spotted Salamander is a striking amphibian found in the Great Smoky Mountains, easily identified by its black body adorned with bright yellow spots. 
-                        Preferring moist, wooded habitats, they are most often seen during their breeding season in early spring, when they migrate to vernal pools to lay eggs. 
-                        These nocturnal creatures feed on insects, worms, and other small invertebrates. The spotted salamander plays an important role in controlling insect populations 
-                        and maintaining the health of the park’s ecosystem.</p>
-                    <p class="font-sm">Source: (Lang Elliot)</p>
-                </div>
-                <div class="checkbox-container">
-                    <span class="checkmark"></span>
-                    <input type="checkbox">
-                </div>
-            </div>
-            <div class="container">
-                <a href="https://www.nps.gov/grsm/learn/nature/white-tailed-deer.htm"><img alt="White-tailed Deer" src="./images/white_deer.jpg"></a>
-                <div class="animal-description">
-                    <a id="W"></a>
-                    <h2>White-tailed Deer</h2>
-                    <div class="subheading">
-                        <ul>
-                            <li>"Odocoileus virginianus"</li>
-                            <li>Mammal</li>
-                            <li><a href="https://www.nps.gov/grsm/learn/nature/white-tailed-deer.htm">National Park</a></li>
-                        </ul>
+                    <div class="checkbox-container">
+                        <span class="checkmark"></span>
+                        <input type="checkbox">
                     </div>
-                    <p>The White-tailed Deer (Odocoileus virginianus) is a common and graceful sight in the Great Smoky Mountains. Recognizable by its white underside and tail, which it raises as a warning signal when startled, this deer is a herbivore, feeding on grasses, shrubs, and tree leaves. Active primarily at dawn and dusk, white-tailed deer are known for their agility and speed, helping them evade predators. As a key species in the park, they help shape plant communities through browsing, and their presence contributes to the overall health of the ecosystem.</p>
-                    <p class="font-sm">Source: (Mickey / Flickr; CC BY-NC-SA 2.0)</p>
                 </div>
-                <div class="checkbox-container">
-                    <span class="checkmark"></span>
-                    <input type="checkbox">
+                <div class="container">
+                    <a class="hideOnMobile" href="https://www.nps.gov/grsm/learn/nature/elk.htm"><img alt="Elk" src="./images/elk.jpg"></a>
+                    <div class="animal-description">
+                        <div class="animal-header">
+                            <h2>Elk</h2>
+                            <svg class="hideOnMobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path class="tooltip-icon" d="M297.2 248.9C311.6 228.3 320 203.2 320 176c0-70.7-57.3-128-128-128S64 105.3 64 176c0 27.2 8.4 52.3 22.8 72.9c3.7 5.3 8.1 11.3 12.8 17.7c0 0 0 0 0 0c12.9 17.7 28.3 38.9 39.8 59.8c10.4 19 15.7 38.8 18.3 57.5L109 384c-2.2-12-5.9-23.7-11.8-34.5c-9.9-18-22.2-34.9-34.5-51.8c0 0 0 0 0 0s0 0 0 0c-5.2-7.1-10.4-14.2-15.4-21.4C27.6 247.9 16 213.3 16 176C16 78.8 94.8 0 192 0s176 78.8 176 176c0 37.3-11.6 71.9-31.4 100.3c-5 7.2-10.2 14.3-15.4 21.4c0 0 0 0 0 0s0 0 0 0c-12.3 16.8-24.6 33.7-34.5 51.8c-5.9 10.8-9.6 22.5-11.8 34.5l-48.6 0c2.6-18.7 7.9-38.6 18.3-57.5c11.5-20.9 26.9-42.1 39.8-59.8c0 0 0 0 0 0s0 0 0 0s0 0 0 0c4.7-6.4 9-12.4 12.7-17.7zM192 128c-26.5 0-48 21.5-48 48c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-44.2 35.8-80 80-80c8.8 0 16 7.2 16 16s-7.2 16-16 16zm0 384c-44.2 0-80-35.8-80-80l0-16 160 0 0 16c0 44.2-35.8 80-80 80z"/></svg>
+                            <p class="tooltip-content">Elk have a unique way of communicating with each other through a variety of sounds, including a high-pitched whistle called a "bugle"!</p>
+                        </div>
+                        <div class="subheading">
+                            <ul>
+                                <li>"Cervus canadensis"</li>
+                                <li>Mammal</li>
+                                <li><a href="https://www.nps.gov/grsm/learn/nature/elk.htm">National Park</a></li>
+                            </ul>
+                        </div>
+                        <p>The Bull Elk is a majestic animal found in the Great Smoky Mountains, known for its impressive size and large, antlered rack. During the fall rut, bull elk are particularly notable for their loud bugling calls as they compete for mates. These herbivores graze on grasses, shrubs, and tree bark, and can often be seen in open meadows or along the park's edges. Once near extinction in the region, elk are now a symbol of wildlife conservation efforts, playing a key role in shaping the park's ecosystems through their grazing habits.</p>
+                        <p class="font-sm">Source: (https://www.romanticasheville.com/elk.htm)</p>
+                    </div>
+                    <div class="checkbox-container">
+                        <span class="checkmark"></span>
+                        <input type="checkbox">
+                    </div>
+                </div>
+                <div class="container">
+                    <a class="hideOnMobile" href="https://www.nps.gov/bith/learn/nature/eastern-gray-squirrel.htm"><img alt="Gray Squirrel" src="./images/gray_squirrel.jpg"></a>
+                    <div class="animal-description">
+                        <div class="animal-header">
+                            <h2>Gray Squirrel (Eastern)</h2>
+                            <svg class="hideOnMobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path class="tooltip-icon" d="M297.2 248.9C311.6 228.3 320 203.2 320 176c0-70.7-57.3-128-128-128S64 105.3 64 176c0 27.2 8.4 52.3 22.8 72.9c3.7 5.3 8.1 11.3 12.8 17.7c0 0 0 0 0 0c12.9 17.7 28.3 38.9 39.8 59.8c10.4 19 15.7 38.8 18.3 57.5L109 384c-2.2-12-5.9-23.7-11.8-34.5c-9.9-18-22.2-34.9-34.5-51.8c0 0 0 0 0 0s0 0 0 0c-5.2-7.1-10.4-14.2-15.4-21.4C27.6 247.9 16 213.3 16 176C16 78.8 94.8 0 192 0s176 78.8 176 176c0 37.3-11.6 71.9-31.4 100.3c-5 7.2-10.2 14.3-15.4 21.4c0 0 0 0 0 0s0 0 0 0c-12.3 16.8-24.6 33.7-34.5 51.8c-5.9 10.8-9.6 22.5-11.8 34.5l-48.6 0c2.6-18.7 7.9-38.6 18.3-57.5c11.5-20.9 26.9-42.1 39.8-59.8c0 0 0 0 0 0s0 0 0 0s0 0 0 0c4.7-6.4 9-12.4 12.7-17.7zM192 128c-26.5 0-48 21.5-48 48c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-44.2 35.8-80 80-80c8.8 0 16 7.2 16 16s-7.2 16-16 16zm0 384c-44.2 0-80-35.8-80-80l0-16 160 0 0 16c0 44.2-35.8 80-80 80z"/></svg>
+                            <p class="tooltip-content">Gray Squirrels have a special way of remembering where they've hidden their food caches! They use a combination of spatial memory and visual cues to recall the locations of their hidden stashes, which can be scattered across their territory.</p>
+                        </div>
+                        <div class="subheading">
+                            <ul>
+                                <li>"Sciurus carolinensis"</li>
+                                <li>Rodent</li>
+                                <li><a href="https://www.nps.gov/bith/learn/nature/eastern-gray-squirrel.htm">National Park</a></li>
+                            </ul>
+                        </div>
+                        <p>The Gray Squirrel is a common and lively sight in the Great Smoky Mountains, easily recognized by its bushy tail and gray fur. These agile rodents thrive in wooded areas, where they feed on nuts, seeds, and fruits, often storing food for the winter months. Known for their playful behavior, gray squirrels are excellent climbers and can be seen darting through trees or foraging on the forest floor. They play a vital role in seed dispersal, helping to maintain the health of the park’s diverse plant life.</p>
+                        <p class="font-sm">Source: (Images courtesy of NPS)</p>
+                    </div>
+                    <div class="checkbox-container">
+                        <span class="checkmark"></span>
+                        <input type="checkbox">
+                    </div>
+                </div>
+                <div class="container">
+                    <a class="hideOnMobile" href="https://www.nps.gov/grsm/learn/nature/amphibians.htm"><img alt="Spotted Salamander" src="./images/spotted_salamander.jpg"></a>
+                    <div class="animal-description">
+                        <div class="animal-header">
+                            <h2>Spotted Salamander</h2>
+                            <svg class="hideOnMobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path class="tooltip-icon" d="M297.2 248.9C311.6 228.3 320 203.2 320 176c0-70.7-57.3-128-128-128S64 105.3 64 176c0 27.2 8.4 52.3 22.8 72.9c3.7 5.3 8.1 11.3 12.8 17.7c0 0 0 0 0 0c12.9 17.7 28.3 38.9 39.8 59.8c10.4 19 15.7 38.8 18.3 57.5L109 384c-2.2-12-5.9-23.7-11.8-34.5c-9.9-18-22.2-34.9-34.5-51.8c0 0 0 0 0 0s0 0 0 0c-5.2-7.1-10.4-14.2-15.4-21.4C27.6 247.9 16 213.3 16 176C16 78.8 94.8 0 192 0s176 78.8 176 176c0 37.3-11.6 71.9-31.4 100.3c-5 7.2-10.2 14.3-15.4 21.4c0 0 0 0 0 0s0 0 0 0c-12.3 16.8-24.6 33.7-34.5 51.8c-5.9 10.8-9.6 22.5-11.8 34.5l-48.6 0c2.6-18.7 7.9-38.6 18.3-57.5c11.5-20.9 26.9-42.1 39.8-59.8c0 0 0 0 0 0s0 0 0 0s0 0 0 0c4.7-6.4 9-12.4 12.7-17.7zM192 128c-26.5 0-48 21.5-48 48c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-44.2 35.8-80 80-80c8.8 0 16 7.2 16 16s-7.2 16-16 16zm0 384c-44.2 0-80-35.8-80-80l0-16 160 0 0 16c0 44.2-35.8 80-80 80z"/></svg>
+                            <p class="tooltip-content">Spotted Salamanders have a unique, symbiotic relationship with a type of algae that lives inside their eggs! The algae, called Oophila amblystomatis, is a type of green algae that grows inside the salamander's eggs and provides them with oxygen and nutrients.</p>
+                        </div>
+                        <div class="subheading">
+                            <ul>
+                                <li>"Ambystoma maculatum"</li>
+                                <li>Amphibian</li>
+                                <li><a href="https://www.nps.gov/grsm/learn/nature/amphibians.htm">National Park</a></li>
+                            </ul>
+                        </div>
+                        <p>The Spotted Salamander is a striking amphibian found in the Great Smoky Mountains, easily identified by its black body adorned with bright yellow spots. 
+                            Preferring moist, wooded habitats, they are most often seen during their breeding season in early spring, when they migrate to vernal pools to lay eggs. 
+                            These nocturnal creatures feed on insects, worms, and other small invertebrates. The spotted salamander plays an important role in controlling insect populations 
+                            and maintaining the health of the park’s ecosystem.</p>
+                        <p class="font-sm">Source: (Lang Elliot)</p>
+                    </div>
+                    <div class="checkbox-container">
+                        <span class="checkmark"></span>
+                        <input type="checkbox">
+                    </div>
+                </div>
+                <div class="container">
+                    <a class="hideOnMobile" href="https://www.nps.gov/grsm/learn/nature/white-tailed-deer.htm"><img alt="White-tailed Deer" src="./images/white_deer.jpg"></a>
+                    <div class="animal-description">
+                        <div class="animal-header">
+                            <h2>White-tailed Deer</h2>
+                            <svg class="hideOnMobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path class="tooltip-icon" d="M297.2 248.9C311.6 228.3 320 203.2 320 176c0-70.7-57.3-128-128-128S64 105.3 64 176c0 27.2 8.4 52.3 22.8 72.9c3.7 5.3 8.1 11.3 12.8 17.7c0 0 0 0 0 0c12.9 17.7 28.3 38.9 39.8 59.8c10.4 19 15.7 38.8 18.3 57.5L109 384c-2.2-12-5.9-23.7-11.8-34.5c-9.9-18-22.2-34.9-34.5-51.8c0 0 0 0 0 0s0 0 0 0c-5.2-7.1-10.4-14.2-15.4-21.4C27.6 247.9 16 213.3 16 176C16 78.8 94.8 0 192 0s176 78.8 176 176c0 37.3-11.6 71.9-31.4 100.3c-5 7.2-10.2 14.3-15.4 21.4c0 0 0 0 0 0s0 0 0 0c-12.3 16.8-24.6 33.7-34.5 51.8c-5.9 10.8-9.6 22.5-11.8 34.5l-48.6 0c2.6-18.7 7.9-38.6 18.3-57.5c11.5-20.9 26.9-42.1 39.8-59.8c0 0 0 0 0 0s0 0 0 0s0 0 0 0c4.7-6.4 9-12.4 12.7-17.7zM192 128c-26.5 0-48 21.5-48 48c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-44.2 35.8-80 80-80c8.8 0 16 7.2 16 16s-7.2 16-16 16zm0 384c-44.2 0-80-35.8-80-80l0-16 160 0 0 16c0 44.2-35.8 80-80 80z"/></svg>
+                            <p class="tooltip-content">White-tailed Deer have a highly developed sense of smell, and can detect scents that are up to 6 times more subtle than what humans can detect!</p>
+                        </div>
+                        <div class="subheading">
+                            <ul>
+                                <li>"Odocoileus virginianus"</li>
+                                <li>Mammal</li>
+                                <li><a href="https://www.nps.gov/grsm/learn/nature/white-tailed-deer.htm">National Park</a></li>
+                            </ul>
+                        </div>
+                        <p>The White-tailed Deer (Odocoileus virginianus) is a common and graceful sight in the Great Smoky Mountains. Recognizable by its white underside and tail, which it raises as a warning signal when startled, this deer is a herbivore, feeding on grasses, shrubs, and tree leaves. Active primarily at dawn and dusk, white-tailed deer are known for their agility and speed, helping them evade predators. As a key species in the park, they help shape plant communities through browsing, and their presence contributes to the overall health of the ecosystem.</p>
+                        <p class="font-sm">Source: (Mickey / Flickr; CC BY-NC-SA 2.0)</p>
+                    </div>
+                    <div class="checkbox-container">
+                        <span class="checkmark"></span>
+                        <input type="checkbox">
+                    </div>
                 </div>
             </div>
         </section>
