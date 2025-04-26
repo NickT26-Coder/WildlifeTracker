@@ -265,6 +265,23 @@ input[type="search"] {
     width: 80%;
 }
 
+.searchbar + p {
+    color: var(--secondary-color);
+    font-size: large;
+    font-weight: bold;
+}
+
+.animal-cards.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.animal-cards {
+    opacity: 1;
+    visibility: visible;
+    transition: visibility 0.5s, opacity 0.5s ease-in-out;
+}
+
 .animal-description h2 {
     width: fit-content;
     display: inline;

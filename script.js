@@ -2,9 +2,11 @@
 const API_KEY = '29wjGbIvvf0UYnYd6r3LEgRIVJYXroiZ936UKXea'
 const base_URL = 'https://irmaservices.nps.gov/taxonomy/v2/rest/searchByCommonName/'
 // const URL = 'https://developer.nps.gov/api/v1/parks?parkCode=Grsm&api_key=' + API_KEY
+let animalCards = document.querySelector(".animal-cards.hide")
+
 
 try {
-    fetch("/animals.json")
+    fetch("./animals.json")
     .then((response) => response.json())
     .then((json) => {
         getData(json)
@@ -32,23 +34,23 @@ async function getData(animalData) {
             data[0].website_link = animalData[animal].website_link
             data[0].description = animalData[animal].description
             data[0].fun_fact = animalData[animal].fun_fact
-            addAnimal(data)
+            addAnimal(data)//Change?
         } catch(error) {
                 console.error(error)
         }
     }
+    animalCards.classList.toggle("hide")
+    animalCards.previousElementSibling.remove()
     addSearchBar()
 }
 
 function addAnimal(data) {
-    const animalCards = document.querySelector(".animal-cards")
+    animalCards = document.querySelector(".animal-cards.hide")
     const animalContainer = document.createElement("div")
     const imageAnchor = document.createElement("a")
     const animalImage = document.createElement("img")
     const animalDesc = document.createElement("div")
     const checkboxContainer = document.createElement("div")
-    const checkSpan = document.createElement("span")
-    const checkInput = document.createElement("input")
     const animalH2 = document.createElement("h2")
     const tooltipSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg")
     const toolTipPath = document.createElementNS("http://www.w3.org/2000/svg", "path")
@@ -87,6 +89,7 @@ function addAnimal(data) {
     webLinkList.appendChild(webLink)
     webLink.href = data[0].website_link
     webLink.textContent = "More Info"
+    webLink.setAttribute("target", "_blank")
     //Paragraph
     animalDesc.append(animalPara, imageCredit)
     animalPara.textContent = data[0].description
@@ -135,8 +138,6 @@ function addSearchBar() {
         const input = e.target.value.toLowerCase()
         animalCards.forEach((animal) => {
             let animalName = animal.querySelector("h2").textContent.toLowerCase()
-            console.log(input)
-            console.log(animalName)
             if (!animalName.includes(input)) {
                 animal.classList.add("hide")
             }
